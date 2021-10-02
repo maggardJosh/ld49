@@ -23,10 +23,7 @@ public class ShipController : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
-    {
-      
-    }
+
 
     void FixedUpdate()
     {
