@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dbaaec3e5bcc945fc8981d94a215d709, type: 3}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.6179246, g: 0.9185486, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -180,7 +180,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dbaaec3e5bcc945fc8981d94a215d709, type: 3}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.6179246, g: 0.9185486, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -288,7 +288,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e719b16502334623aa3cf980705b8e9, type: 3}
-  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -351,7 +351,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3343363706442079313}
-  m_LocalRotation: {x: -0, y: -0, z: -0.011554503, w: 0.99993324}
+  m_LocalRotation: {x: 0, y: 0, z: -0.011553846, w: 0.99993324}
   m_LocalPosition: {x: -16.62, y: 5.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -401,13 +401,13 @@ MonoBehaviour:
   thrustPower: 80
   thrusterData:
   - controller: {fileID: 3343363706431371041}
-    key: 97
+    key: 118
   - controller: {fileID: 2323572573372168482}
-    key: 108
+    key: 110
   - controller: {fileID: 2323572572575374547}
-    key: 122
+    key: 102
   - controller: {fileID: 2323572572059433142}
-    key: 44
+    key: 106
 --- !u!1001 &2323572572801771338
 PrefabInstance:
   m_ObjectHideFlags: 0
