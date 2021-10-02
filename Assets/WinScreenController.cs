@@ -9,6 +9,18 @@ public class WinScreenController : Singleton<WinScreenController>
 
    public void ShowWin()
    {
-      winScreen.SetActive(true);
+      if(!winScreen.activeInHierarchy)
+      {
+         winScreen.SetActive(true);
+         StartCoroutine(LoadNextScene());
+      }
+      
+   }
+
+   private IEnumerator LoadNextScene()
+   {
+      yield return new WaitForSeconds(2);
+      GameManager.Instance.LoadNextLevel();
+      winScreen.SetActive(false);
    }
 }
