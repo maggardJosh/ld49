@@ -21,7 +21,9 @@ public class ballHomeController : MonoBehaviour
         }
         
         if(_stayCount >= StayToWinSeconds)
-            Debug.Log("YOU WIN");
+        {
+            WinScreenController.Instance.ShowWin();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
