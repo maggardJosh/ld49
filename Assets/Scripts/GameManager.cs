@@ -10,6 +10,8 @@ public class GameManager : Singleton<GameManager>
 
     public void Restart()
     {
+        if (WinScreenController.Instance.HasWon)
+            return;
         LevelTransition.Instance.HideLevel(() =>
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

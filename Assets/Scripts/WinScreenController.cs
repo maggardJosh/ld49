@@ -6,11 +6,13 @@ using UnityEngine;
 public class WinScreenController : Singleton<WinScreenController>
 {
     [SerializeField] private GameObject winScreen;
+    public bool HasWon => winScreen.activeInHierarchy;
 
     public void ShowWin()
     {
         if (!winScreen.activeInHierarchy)
         {
+            RestartScreenController.Instance.Hide();
             winScreen.SetActive(true);
             StartCoroutine(LoadNextScene());
         }

@@ -10,6 +10,9 @@ public class RestartScreenController : Singleton<RestartScreenController>
 
     private void Update()
     {
+        if (WinScreenController.Instance.HasWon)
+            return;
+        
         if (restartScreen.activeInHierarchy)
         {
             if(Input.GetKeyUp(KeyCode.R))
@@ -25,5 +28,10 @@ public class RestartScreenController : Singleton<RestartScreenController>
 
         if(Input.GetKeyUp(KeyCode.R))
             restartScreen.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        restartScreen.SetActive(false);
     }
 }
