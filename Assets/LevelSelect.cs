@@ -6,6 +6,11 @@ public class LevelSelect : Singleton<LevelSelect>
     [SerializeField] private GameObject levelSelectScreen;
     public bool IsVisible => levelSelectScreen.activeInHierarchy;
 
+    protected override void HandleAwake()
+    {
+        levelSelectScreen.SetActive(false);
+    }
+
     private void Update()
     {
         if (RestartScreenController.Instance.IsShown || WinScreenController.Instance.HasWon)
@@ -18,7 +23,11 @@ public class LevelSelect : Singleton<LevelSelect>
         else
         {
             if(Input.GetKeyUp(KeyCode.Escape))
+            {
+                foreach(var button in levelSelectScreen.GetComponentsInChildren<LevelButton>())
+                    button.UpdateDisplay();
                 levelSelectScreen.SetActive(true);
+            }
         }
     }
 

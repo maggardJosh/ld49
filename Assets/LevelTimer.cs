@@ -19,7 +19,9 @@ public class LevelTimer : Singleton<LevelTimer>
     public void StopTimer()
     {
         isTimerActive = false;
+        SetTimeRecordForLevel(SceneManager.GetActiveScene().name);
     }
+
 
     public float GetTime() => _time;
 
@@ -29,8 +31,25 @@ public class LevelTimer : Singleton<LevelTimer>
             return;
         
         _time += Time.deltaTime;
-        var ts = TimeSpan.FromSeconds(_time);
+        _text.text = $"<mspace=.6em>{SceneManager.GetActiveScene().name}\n {GetTimeString(_time)}</mspace>";
+    }
+
+    public static string GetTimeString(float seconds)
+    {
+        var ts = TimeSpan.FromSeconds(seconds);
         var hoursText = ts.Hours > 0 ? ts.Hours.ToString("00") + ":" : "";
-        _text.text = $"<mspace=.6em>{SceneManager.GetActiveScene().name}\n {hoursText}{ts.Minutes:00}:{ts.Seconds:00}.{ts.Milliseconds:000}</mspace>";
+        return $"{hoursText}{ts.Minutes:00}:{ts.Seconds:00}.{ts.Milliseconds:000}";
+    }
+
+    private void SetTimeRecordForLevel(string levelString)
+    {
+        var currentRecord = GetRecordForLevel(levelString);
+        if(currentRecord <= 0 || currentRecord > _time)
+            PlayerPrefs.SetFloat("Record-" + levelString, _time);
+    }
+    
+    public static float GetRecordForLevel(string levelString)
+    {
+        return PlayerPrefs.GetFloat("Record-" + levelString, 0);
     }
 }
