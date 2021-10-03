@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4416acbaabde44cfca40af25dd1034b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splashSeconds: 4
+  splashSeconds: 8
 --- !u!114 &17687081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &17687084
 RectTransform:
@@ -227,7 +227,7 @@ RectTransform:
   m_Children:
   - {fileID: 368453239}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5adbedd6a010340728f632db21e3650d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c86cd2c24f934852ac0a8369e328809, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -542,9 +542,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1252204600
+--- !u!1001 &4981514801507146429
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -569,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 4981514801226358141, guid: 564f4e0467bd54bddb8ad224783f40d7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4981514801226358141, guid: 564f4e0467bd54bddb8ad224783f40d7,
         type: 3}
