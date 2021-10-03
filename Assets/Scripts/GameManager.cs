@@ -20,17 +20,18 @@ public class GameManager : Singleton<GameManager>
         });
     }
 
-    public void LoadNextLevel(Action onLoadAction)
+    public void LoadNextLevel(Action onLoadAction, bool useTimer = true)
     {
         LevelTransition.Instance.HideLevel(() =>
         {
             var nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
             if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
-                nextSceneIndex = 0;
+                nextSceneIndex = 1; //Skip title
             SceneManager.LoadScene(nextSceneIndex);
             onLoadAction?.Invoke();
             LevelTransition.Instance.ShowLevel();
-            LevelTimer.Instance.RestartTimer();
+            if(useTimer)
+                LevelTimer.Instance.RestartTimer();
         });
     }
 
