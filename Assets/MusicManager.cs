@@ -28,4 +28,14 @@ public class MusicManager : Singleton<MusicManager>
     {
         return PlayerPrefs.GetInt("musicMute", 0) == 0;
     }
+
+    public static bool IsSFXPlaying()
+    {
+        return PlayerPrefs.GetInt("sfxMute", 0) == 0;
+    }
+
+    public void ToggleSFXMute()
+    {
+        PlayerPrefs.SetInt("sfxMute", IsSFXPlaying() ? 1 : 0);
+    }
 }

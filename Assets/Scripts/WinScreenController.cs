@@ -14,7 +14,8 @@ public class WinScreenController : Singleton<WinScreenController>
         {
             RestartScreenController.Instance.Hide();
             winScreen.SetActive(true);
-            winAudio.Play();
+            if(MusicManager.IsSFXPlaying())
+                winAudio.Play();
             StartCoroutine(LoadNextScene());
             LevelTimer.Instance.StopTimer();
         }

@@ -20,7 +20,8 @@ public class TamaController : MonoBehaviour
     public void Shrink()
     {
         _animator.SetTrigger("shrink");
-        _pickupsfx.Play();
+        if (MusicManager.IsSFXPlaying())
+            _pickupsfx.Play();
     }
 
     public void Show(Vector2 pos, Vector2 vel)
@@ -30,7 +31,8 @@ public class TamaController : MonoBehaviour
         _storedVel = vel;
         _animator.SetTrigger("show");
         gameObject.SetActive(true);
-        _throwsfx.Play();
+        if (MusicManager.IsSFXPlaying())
+            _throwsfx.Play();
     }
 
     public void SetStoredVel()

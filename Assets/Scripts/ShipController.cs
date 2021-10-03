@@ -43,7 +43,7 @@ public class ShipController : MonoBehaviour
             }
         }
 
-        _thrusterSource.mute = !thrusterActive;
+        _thrusterSource.mute = !MusicManager.IsSFXPlaying() || !thrusterActive;
 
     }
 }
