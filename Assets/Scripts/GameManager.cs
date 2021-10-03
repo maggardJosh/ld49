@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             LevelTransition.Instance.ShowLevel();
+            LevelTimer.Instance.RestartTimer();
         });
     }
 
@@ -29,6 +30,7 @@ public class GameManager : Singleton<GameManager>
             SceneManager.LoadScene(nextSceneIndex);
             onLoadAction?.Invoke();
             LevelTransition.Instance.ShowLevel();
+            LevelTimer.Instance.RestartTimer();
         });
     }
 
@@ -39,6 +41,7 @@ public class GameManager : Singleton<GameManager>
             SceneManager.LoadScene(sceneName);
             onLoadAction?.Invoke();
             LevelTransition.Instance.ShowLevel();
+            LevelTimer.Instance.RestartTimer();
         });
     }
 }

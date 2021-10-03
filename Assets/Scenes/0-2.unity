@@ -1435,10 +1435,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 245054593489605099, guid: 1b139a23bfe6943db862121fb79f263e,
+    - target: {fileID: 4050226132321325348, guid: 1b139a23bfe6943db862121fb79f263e,
         type: 3}
-      propertyPath: m_Material
+      propertyPath: m_text
+      value: '<mspace=.6em>0-1
+
+        00:00:00</mspace>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050226132321325348, guid: 1b139a23bfe6943db862121fb79f263e,
+        type: 3}
+      propertyPath: m_fontAsset
       value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 4050226132321325348, guid: 1b139a23bfe6943db862121fb79f263e,
+        type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050226132321325348, guid: 1b139a23bfe6943db862121fb79f263e,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4050226132321325348, guid: 1b139a23bfe6943db862121fb79f263e,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4132242577532240739, guid: 1b139a23bfe6943db862121fb79f263e,
         type: 3}

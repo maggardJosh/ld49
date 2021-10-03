@@ -15,6 +15,7 @@ public class WinScreenController : Singleton<WinScreenController>
             RestartScreenController.Instance.Hide();
             winScreen.SetActive(true);
             StartCoroutine(LoadNextScene());
+            LevelTimer.Instance.StopTimer();
         }
     }
 
