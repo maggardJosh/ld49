@@ -1,11 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using ImportedTools;
 using UnityEngine;
 
 public class WinScreenController : Singleton<WinScreenController>
 {
     [SerializeField] private GameObject winScreen;
+    [SerializeField] private AudioSource winAudio;
     public bool HasWon => winScreen.activeInHierarchy;
 
     public void ShowWin()
@@ -14,6 +14,7 @@ public class WinScreenController : Singleton<WinScreenController>
         {
             RestartScreenController.Instance.Hide();
             winScreen.SetActive(true);
+            winAudio.Play();
             StartCoroutine(LoadNextScene());
             LevelTimer.Instance.StopTimer();
         }

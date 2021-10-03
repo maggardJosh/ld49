@@ -9,6 +9,7 @@ public class ShipController : MonoBehaviour
     private SpriteRenderer _rightSprite;
 
     [SerializeField] private ThrusterData[] thrusterData;
+    [SerializeField] private AudioSource _thrusterSource;
 
     [Serializable]
     public class ThrusterData
@@ -27,13 +28,14 @@ public class ShipController : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+        bool thrusterActive = false;
         foreach (var d in thrusterData)
         {
             if (Input.GetKey(d.key))
             {
                 _rigidBody.AddForceAtPosition(d.controller.transform.rotation * Vector2.up * thrustPower, d.controller.transform.position);
                 d.controller.SetActive(true);
+                thrusterActive = true;
             }
             else
             {
@@ -41,6 +43,7 @@ public class ShipController : MonoBehaviour
             }
         }
 
-        
+        _thrusterSource.mute = !thrusterActive;
+
     }
 }
