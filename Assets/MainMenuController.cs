@@ -1,0 +1,26 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using ImportedTools;
+using UnityEngine;
+
+public class MainMenuController : Singleton<MainMenuController>
+{
+    [SerializeField] private GameObject mainMenu;
+
+    public bool IsVisible => mainMenu.activeInHierarchy;
+
+    void Awake()
+    {
+        mainMenu.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (LevelSelect.Instance.IsVisible || RestartScreenController.Instance.IsShown)
+            return;
+
+        if (Input.GetKeyUp(KeyCode.Escape))
+            mainMenu.SetActive(!IsVisible);
+    }
+}

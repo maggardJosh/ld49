@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using ImportedTools;
+﻿using ImportedTools;
 using UnityEngine;
 
 public class RestartScreenController : Singleton<RestartScreenController>
@@ -11,7 +8,7 @@ public class RestartScreenController : Singleton<RestartScreenController>
 
     private void Update()
     {
-        if (WinScreenController.Instance.HasWon || LevelSelect.Instance.IsVisible)
+        if (WinScreenController.Instance.HasWon || LevelSelect.Instance.IsVisible || MainMenuController.Instance.IsVisible)
             return;
         
         if (restartScreen.activeInHierarchy)

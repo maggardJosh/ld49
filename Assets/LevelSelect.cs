@@ -20,15 +20,13 @@ public class LevelSelect : Singleton<LevelSelect>
             if(Input.GetKeyUp(KeyCode.Escape))
                 levelSelectScreen.SetActive(false);
         }
-        else
-        {
-            if(Input.GetKeyUp(KeyCode.Escape))
-            {
-                foreach(var button in levelSelectScreen.GetComponentsInChildren<LevelButton>())
-                    button.UpdateDisplay();
-                levelSelectScreen.SetActive(true);
-            }
-        }
+    }
+
+    public void Show()
+    {
+        foreach(var button in levelSelectScreen.GetComponentsInChildren<LevelButton>())
+            button.UpdateDisplay();
+        levelSelectScreen.SetActive(true);
     }
 
     public void OnButtonClick(string sceneName)
@@ -36,4 +34,5 @@ public class LevelSelect : Singleton<LevelSelect>
         levelSelectScreen.SetActive(false);
         GameManager.Instance.LoadScene(sceneName, null);
     }
+
 }
