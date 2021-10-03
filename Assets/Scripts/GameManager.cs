@@ -31,4 +31,14 @@ public class GameManager : Singleton<GameManager>
             LevelTransition.Instance.ShowLevel();
         });
     }
+
+    public void LoadScene(string sceneName, Action onLoadAction)
+    {
+        LevelTransition.Instance.HideLevel(() =>
+        {
+            SceneManager.LoadScene(sceneName);
+            onLoadAction?.Invoke();
+            LevelTransition.Instance.ShowLevel();
+        });
+    }
 }
