@@ -1,24 +1,32 @@
-﻿using ImportedTools;
+﻿using System;
+using ImportedTools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-
     public Color thrusterActiveColor;
     public Color thrusterInactiveColor;
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        LevelTransition.Instance.HideLevel(() =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            LevelTransition.Instance.ShowLevel();
+        });
     }
-    
-    public void LoadNextLevel()
+
+    public void LoadNextLevel(Action onLoadAction)
     {
-        var nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        if (nextSceneIndex > SceneManager.sceneCount)
-            nextSceneIndex = 0;
-        SceneManager.LoadScene(nextSceneIndex);
+        LevelTransition.Instance.HideLevel(() =>
+        {
+            var nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
+                nextSceneIndex = 0;
+            SceneManager.LoadScene(nextSceneIndex);
+            onLoadAction?.Invoke();
+            LevelTransition.Instance.ShowLevel();
+        });
     }
-   
 }
