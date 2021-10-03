@@ -371,6 +371,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1137552425602884928, guid: 76376a50f8f9d42828e90cf4a87f1129,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137552425602884928, guid: 76376a50f8f9d42828e90cf4a87f1129,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137552425602884928, guid: 76376a50f8f9d42828e90cf4a87f1129,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3481175088291445808, guid: 76376a50f8f9d42828e90cf4a87f1129,
         type: 3}
       propertyPath: m_RootOrder
@@ -379,12 +394,12 @@ PrefabInstance:
     - target: {fileID: 3481175088291445808, guid: 76376a50f8f9d42828e90cf4a87f1129,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3481175088291445808, guid: 76376a50f8f9d42828e90cf4a87f1129,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3481175088291445808, guid: 76376a50f8f9d42828e90cf4a87f1129,
         type: 3}
@@ -3220,7 +3235,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: dbaaec3e5bcc945fc8981d94a215d709, type: 3}
     - target: {fileID: 5269361431615945067, guid: c0fd18b79313c4256a6a38f9ee0e0d3d,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -3239,12 +3254,12 @@ PrefabInstance:
     - target: {fileID: 5269361432006335367, guid: c0fd18b79313c4256a6a38f9ee0e0d3d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.1
+      value: -61.8
       objectReference: {fileID: 0}
     - target: {fileID: 5269361432006335367, guid: c0fd18b79313c4256a6a38f9ee0e0d3d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.3
+      value: 92.8
       objectReference: {fileID: 0}
     - target: {fileID: 5269361432006335367, guid: c0fd18b79313c4256a6a38f9ee0e0d3d,
         type: 3}
@@ -3290,7 +3305,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: dbaaec3e5bcc945fc8981d94a215d709, type: 3}
     - target: {fileID: 5269361432517697092, guid: c0fd18b79313c4256a6a38f9ee0e0d3d,
         type: 3}
       propertyPath: m_DynamicOccludee
