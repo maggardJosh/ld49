@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14e0c7e939c2430e9643dd5d77388a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrustPower: 80
+  thrustPower: 120
   thrusterData:
   - controller: {fileID: 3343363706431371041}
     key: 118
@@ -584,7 +584,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0019566864, y: -0.24035452}
+  m_Offset: {x: 0.008816183, y: -0.30291653}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -595,7 +595,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87009895, y: 0.38489464}
+  m_Size: {x: 1.0354675, y: 0.23937404}
   m_EdgeRadius: 0
 --- !u!114 &3932863034446203155
 MonoBehaviour:
@@ -612,7 +612,7 @@ MonoBehaviour:
   tamaSpawnSeconds: 1
   cooldownSeconds: 1
   tamaSpawnTransform: {fileID: 266254737170626153}
-  tamaSpawnVel: 15
+  tamaSpawnVel: 20
 --- !u!1001 &2323572572801771338
 PrefabInstance:
   m_ObjectHideFlags: 0
