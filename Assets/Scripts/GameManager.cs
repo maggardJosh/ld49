@@ -8,6 +8,30 @@ public class GameManager : Singleton<GameManager>
     public Color thrusterActiveColor;
     public Color thrusterInactiveColor;
 
+    private void Start()
+    {
+        RefreshKeyCodes();
+    }
+
+    public void RefreshKeyCodes()
+    {
+        string playerfValue = PlayerPrefs.GetString("fkey", KeyCode.F.ToString());
+        if (!KeyCode.TryParse(playerfValue, out fKey))
+            fKey = KeyCode.F;
+        
+        string playervValue = PlayerPrefs.GetString("vkey", KeyCode.V.ToString());
+        if (!KeyCode.TryParse(playervValue, out vKey))
+            vKey = KeyCode.V;
+        
+        string playerjValue = PlayerPrefs.GetString("jkey", KeyCode.J.ToString());
+        if (!KeyCode.TryParse(playerjValue, out jKey))
+            jKey = KeyCode.J;
+        
+        string playernValue = PlayerPrefs.GetString("nkey", KeyCode.N.ToString());
+        if (!KeyCode.TryParse(playernValue, out nKey))
+            nKey = KeyCode.N;
+    }
+
     public void Restart()
     {
         if (WinScreenController.Instance.HasWon)
@@ -45,4 +69,10 @@ public class GameManager : Singleton<GameManager>
             LevelTimer.Instance.RestartTimer();
         });
     }
+
+    public KeyCode fKey = KeyCode.F;
+    public KeyCode vKey = KeyCode.V;
+    public KeyCode nKey = KeyCode.N;
+    public KeyCode jKey = KeyCode.J;
+
 }

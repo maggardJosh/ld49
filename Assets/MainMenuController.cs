@@ -17,7 +17,7 @@ public class MainMenuController : Singleton<MainMenuController>
     // Update is called once per frame
     void Update()
     {
-        if (IsVisible || LevelSelect.Instance.IsVisible || RestartScreenController.Instance.IsShown)
+        if (IsVisible || LevelSelect.Instance.IsVisible || RestartScreenController.Instance.IsShown || ControlsScreenController.Instance.IsVisible)
             Time.timeScale = 0;
         else
         {

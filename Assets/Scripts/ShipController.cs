@@ -31,7 +31,8 @@ public class ShipController : MonoBehaviour
         bool thrusterActive = false;
         foreach (var d in thrusterData)
         {
-            if (Input.GetKey(d.key))
+            KeyCode actualKey = GetInputKey(d.key);
+            if (Input.GetKey(actualKey))
             {
                 _rigidBody.AddForceAtPosition(d.controller.transform.rotation * Vector2.up * thrustPower, d.controller.transform.position);
                 d.controller.SetActive(true);
@@ -45,5 +46,17 @@ public class ShipController : MonoBehaviour
 
         _thrusterSource.mute = !MusicManager.IsSFXPlaying() || !thrusterActive;
 
+    }
+
+    private KeyCode GetInputKey(KeyCode dKey)
+    {
+        switch (dKey)
+        {
+            case KeyCode.F: return GameManager.Instance.fKey;
+            case KeyCode.V: return GameManager.Instance.vKey;
+            case KeyCode.J: return GameManager.Instance.jKey;
+            case KeyCode.N: return GameManager.Instance.nKey;
+            default: return dKey;
+        }
     }
 }
