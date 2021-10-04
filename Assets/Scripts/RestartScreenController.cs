@@ -8,7 +8,7 @@ public class RestartScreenController : Singleton<RestartScreenController>
 
     private void Update()
     {
-        if (WinScreenController.Instance.HasWon || LevelSelect.Instance.IsVisible || MainMenuController.Instance.IsVisible)
+        if (WinScreenController.Instance.HasWon || LevelSelect.Instance.IsVisible || MainMenuController.Instance.IsVisible || ControlsScreenController.Instance.IsVisible)
             return;
         
         if (restartScreen.activeInHierarchy)

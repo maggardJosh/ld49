@@ -23,7 +23,7 @@ public class MainMenuController : Singleton<MainMenuController>
         {
             Time.timeScale = 1;
         }
-        if (LevelSelect.Instance.IsVisible || RestartScreenController.Instance.IsShown)
+        if (LevelSelect.Instance.IsVisible || RestartScreenController.Instance.IsShown || ControlsScreenController.Instance.IsVisible)
             return;
 
         if (Input.GetKeyUp(KeyCode.Escape))
